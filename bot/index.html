@@ -1,0 +1,105 @@
+<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<title>Demo asistente | [Nombre del negocio]</title><style>
+:root{--d:#111827;--r:#e63946;--l:#f4f5f7;--bg:#0b0f17}*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% 10%,#2a1216,transparent 45%),var(--bg);color:#fff}
+.c{background:#ffe066;color:#5c4400;font-size:.68rem;font-weight:700;padding:1px 5px;border-radius:4px;white-space:nowrap}
+.stage{display:flex;align-items:center;justify-content:center;gap:56px;min-height:100%;padding:24px}
+.side{max-width:400px}.side h1{font-size:2.6rem;line-height:1.08;margin:10px 0 14px}.side h1 em{color:var(--r);font-style:normal}.side p{opacity:.8}
+.kick{display:inline-block;background:#e6394622;color:#ff8a93;border:1px solid #e6394655;padding:5px 12px;border-radius:30px;font-size:.8rem;font-weight:700}
+.ben{list-style:none;padding:0;margin:22px 0}.ben li{display:flex;gap:12px;align-items:center;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;padding:11px 14px;margin-bottom:9px}.ben i{font-style:normal;font-size:1.3rem;width:38px;height:38px;display:grid;place-items:center;background:var(--r);border-radius:10px;flex:none}.ben b{display:block}.ben span{font-size:.85rem;opacity:.7}
+.by{font-size:.8rem;opacity:.55}
+.phone{width:390px;height:800px;max-height:calc(100vh - 48px);background:#000;border-radius:46px;padding:12px;box-shadow:0 30px 80px #000a,0 0 0 2px #333 inset;flex:none}
+.scr{height:100%;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;background:#efe9e1}
+.demo{background:#ffe066;color:#3d2e00;font-size:.75rem;font-weight:700;text-align:center;padding:6px 10px;line-height:1.3}.demo small{display:block;font-weight:500;opacity:.8}
+.top{background:var(--d);display:flex;align-items:center;gap:10px;padding:10px 12px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--r);display:grid;place-items:center;flex:none}
+.top b{font-size:.98rem;display:block}.top small{font-size:.75rem;color:#86efac}.top .rs{margin-left:auto;background:#ffffff1a;border:0;color:#fff;font:inherit;font-size:.72rem;padding:6px 10px;border-radius:20px;cursor:pointer}
+.chat{flex:1;overflow-y:auto;padding:14px 10px;background-color:#ece5dc;background-image:radial-gradient(#0000000a 1px,transparent 1px);background-size:14px 14px}
+.day{text-align:center;margin:0 0 10px}.day span{background:#fff;color:#555;font-size:.7rem;padding:4px 10px;border-radius:8px;box-shadow:0 1px 1px #0001}
+.m{max-width:84%;padding:7px 10px 5px;border-radius:12px;margin:4px 0;font-size:.9rem;line-height:1.4;color:#111;box-shadow:0 1px 1px #0002;animation:pop .25s ease;position:relative;word-wrap:break-word}
+.m.b{background:#fff;border-top-left-radius:3px}.m.u{background:#ffd9dc;margin-left:auto;border-top-right-radius:3px}
+.t{display:block;text-align:right;font-size:.64rem;color:#777;margin-top:2px}.tk{color:#3b82f6;margin-left:3px}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.97)}to{opacity:1;transform:none}}
+.typing{background:#fff;display:inline-flex;gap:4px;padding:12px 14px;border-radius:12px;border-top-left-radius:3px;margin:4px 0}.typing i{width:7px;height:7px;border-radius:50%;background:#999;animation:bl 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bl{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.cars{display:flex;gap:8px;overflow-x:auto;margin:6px 0;padding-bottom:4px}.car{flex:none;width:200px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px #0002;color:#111;animation:pop .3s}
+.car svg{display:block;width:100%}.car div{padding:8px 10px;font-size:.8rem}.car b{display:block;font-size:.9rem}.car .p{color:var(--r);font-weight:800}
+.card{background:#fff;border-radius:12px;overflow:hidden;max-width:88%;margin:6px 0;box-shadow:0 1px 2px #0002;color:#111;animation:pop .3s}.card h4{margin:0;background:var(--d);color:#fff;padding:9px 12px;font-size:.88rem}.card h4 em{color:#ff8a93;font-style:normal}
+.card dl{margin:0;padding:8px 12px;font-size:.82rem;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}.card dt{color:#777}.card dd{margin:0;font-weight:600}
+.card .ok{background:#dcfce7;color:#166534;font-size:.78rem;padding:7px 12px;font-weight:600}
+.ph{display:flex;gap:4px}.photo{width:110px;height:82px;border-radius:8px;font-size:.68rem!important;background:linear-gradient(135deg,#374151,#111827);display:grid;place-items:center;color:#fff;font-size:.75rem;margin-bottom:3px}
+.qr{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;background:#f7f3ee;border-top:1px solid #0001;max-height:40%;overflow-y:auto}.qr:empty{display:none}
+.qr button{font:inherit;font-size:.84rem;background:#fff;color:var(--d);border:1.5px solid var(--r);padding:7px 12px;border-radius:20px;cursor:pointer;font-weight:600;animation:pop .25s}.qr button:hover{background:var(--r);color:#fff}.qr button.alt{border-color:#9ca3af;color:#555}
+.in{display:flex;gap:8px;padding:8px 10px 12px;background:#f7f3ee}.in input{flex:1;font:inherit;font-size:.9rem;border:0;border-radius:22px;padding:10px 14px;outline:none;color:#111}.in button{width:42px;height:42px;border-radius:50%;border:0;background:var(--r);color:#fff;font-size:1.1rem;cursor:pointer}
+.mob{display:none}
+@media(max-width:900px){.side{display:none}.stage{padding:0}.phone{width:100%;height:100vh;height:100dvh;max-height:none;border-radius:0;padding:0;box-shadow:none}.scr{border-radius:0}}
+</style></head><body>
+<div class="stage">
+<div class="side"><span class="kick">DEMO INTERACTIVA</span><h1>Tu asistente que <em>vende</em> mientras tú trabajas</h1>
+<p>Así contestaría el asistente de <b>[Nombre del negocio]</b> por WhatsApp. Pruébalo en el teléfono de la derecha 👉</p>
+<ul class="ben"><li><i>🕑</i><div><b>Responde 24/7</b><span>Contesta al instante, también de noche y en fin de semana.</span></div></li>
+<li><i>🎯</i><div><b>Filtra clientes</b><span>Pregunta tipo de auto, presupuesto y financiamiento.</span></div></li>
+<li><i>📅</i><div><b>Agenda citas</b><span>Visitas, valuaciones y servicio de taller.</span></div></li>
+<li><i>📸</i><div><b>Recibe fotos de autos</b><span>Quien quiere vender te manda datos y fotos.</span></div></li>
+<li><i>👤</i><div><b>Pasa a un asesor</b><span>Cuando hace falta, te lo deja listo para cerrar.</span></div></li></ul>
+<p class="by">Ejemplo ilustrativo preparado por Teacher Lalo. Textos, datos y horarios se ajustan a tu negocio.</p></div>
+<div class="phone"><div class="scr">
+<div class="demo">Demo: así contestaría tu asistente por WhatsApp<small>Es un ejemplo: nombres, precios y datos son ilustrativos</small></div>
+<div class="top"><div class="av"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11a2 2 0 0 1 2 2v4h-2v1.5a1.5 1.5 0 0 1-3 0V17H8v1.5a1.5 1.5 0 0 1-3 0V17H3v-4a2 2 0 0 1 2-2zm2.1 0h9.8l-1.1-3.4a.5.5 0 0 0-.5-.3H8.7a.5.5 0 0 0-.5.3zM6.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg></div>
+<div><b>[Nombre del negocio]</b><small id="st">en línea</small></div><button class="rs" onclick="reset()">↺ Reiniciar demo</button></div>
+<div class="chat" id="chat"></div><div class="qr" id="qr"></div>
+<form class="in" id="f"><input id="txt" placeholder="Escribe un mensaje…" autocomplete="off"><button aria-label="Enviar">➤</button></form>
+</div></div></div>
+<script>
+const C='<span class="c">[confirmar]</span>',FAST=location.search.includes('fast');
+const chat=document.getElementById('chat'),qr=document.getElementById('qr'),st=document.getElementById('st');
+let S={},busy=false,expect=null,q=Promise.resolve();
+const now=()=>new Date().toLocaleTimeString('es-MX',{hour:'numeric',minute:'2-digit'});
+const sleep=ms=>new Promise(r=>setTimeout(r,FAST?5:ms));
+const down=()=>chat.scrollTop=chat.scrollHeight;
+function add(html,cls){const d=document.createElement('div');d.className='m '+cls;d.innerHTML=html+`<span class="t">${now()}${cls=='u'?'<span class="tk">✓✓</span>':''}</span>`;chat.appendChild(d);down();return d}
+function raw(html){const d=document.createElement('div');d.innerHTML=html;chat.appendChild(d.firstElementChild);down()}
+async function bot(...ms){for(const m of ms){const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';chat.appendChild(t);st.textContent='escribiendo…';down();
+ await sleep(Math.min(500+(typeof m=='string'?m.length*12:400),1600));t.remove();st.textContent='en línea';typeof m=='string'?add(m,'b'):raw(m.html);await sleep(250)}}
+function opts(list,ex){qr.innerHTML='';expect=ex||null;list.forEach(o=>{const[l,fn,alt]=Array.isArray(o)?o:[o,null];const b=document.createElement('button');b.type='button';b.textContent=l;if(alt)b.className='alt';b.onclick=()=>pick(l,fn);qr.appendChild(b)});down()}
+function pick(l,fn){if(busy)return;qr.innerHTML='';add(esc(l),'u');run(()=>(fn||expect)(l))}
+function run(f){busy=true;q=q.then(f).catch(e=>console.error(e)).finally(()=>busy=false)}
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const END=[['🏠 Volver al menú',()=>menu(true)],['↺ Reiniciar demo',()=>reset(),1]];
+const folio=p=>p+'-'+Math.floor(1000+Math.random()*9000);
+const days=()=>{const r=[],d=new Date();const n=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];for(let i=1;r.length<4;i++){const x=new Date(d);x.setDate(d.getDate()+i);if(x.getDay())r.push(n[x.getDay()]+' '+x.getDate()+'/'+(x.getMonth()+1))}return r};
+const HRS=['10:00','12:00','16:00','18:00'];
+function summary(title,rows,ok){return{html:`<div class="card"><h4>${title}</h4><dl>${rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl><div class="ok">${ok}</div></div>`}}
+function carSvg(c,kind){const body={SUV:'M40 118 q6-40 40-44 l24-28 h104 l30 28 q40 4 42 44z',Pickup:'M36 118 v-32 h40 l26-34 h70 l14 34 h100 v32z',Hatchback:'M46 118 q8-40 46-44 l30-30 h78 l42 40 q30 6 32 34z'}[kind]||'M40 118 q10-36 52-40 l30-26 h76 l40 26 q42 4 44 40z';
+ return `<svg viewBox="0 0 320 170"><defs><linearGradient id="g${c.slice(1)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2937"/><stop offset="1" stop-color="#111827"/></linearGradient></defs><rect width="320" height="170" fill="url(#g${c.slice(1)})"/><rect y="132" width="320" height="38" fill="#0006"/><path d="${body}" fill="${c}"/><path d="${body}" fill="none" stroke="#fff3" stroke-width="2"/><circle cx="98" cy="120" r="19" fill="#111"/><circle cx="98" cy="120" r="8" fill="#9ca3af"/><circle cx="234" cy="120" r="19" fill="#111"/><circle cx="234" cy="120" r="8" fill="#9ca3af"/><rect x="10" y="10" width="62" height="20" rx="10" fill="#ffe066"/><text x="41" y="24" font-size="11" font-weight="700" text-anchor="middle" fill="#5c4400" font-family="sans-serif">Ejemplo</text></svg>`}
+async function menu(back){S={};await bot(back?'¿En qué más te puedo ayudar? 😊':'¿En qué te puedo ayudar hoy? Elige una opción o escríbeme 👇');
+ opts([['🚗 Quiero comprar un auto',comprar],['💰 Quiero vender mi auto',vender],['🔧 Taller y servicio',taller],['📍 Ubicación y horario',ubic],['👤 Hablar con un asesor',asesor]])}
+async function start(){chat.innerHTML='<div class="day"><span>Hoy</span></div>';await bot('¡Hola! 👋 Bienvenido a <b>[Nombre del negocio]</b>. Somos un negocio familiar: compramos, vendemos y reparamos autos.','Soy el asistente virtual y te atiendo al momento.');await menu()}
+function reset(){qr.innerHTML='';run(start)}
+// COMPRAR
+async function comprar(){await bot('¡Qué gusto! 🚗 Te ayudo a encontrar tu auto. ¿Qué tipo buscas?');opts(['Sedán','SUV','Pickup','Hatchback'],async t=>{S.tipo=t;
+ await bot('¿Cuál es tu presupuesto aproximado?');opts(['Hasta $150 mil','$150 – $250 mil','$250 – $400 mil','Más de $400 mil'],async p=>{S.pres=p;
+ await bot('¿Te interesa financiamiento? '+C);opts(['Sí, con financiamiento','No, de contado','Quiero información'],async f=>{S.fin=f;
+ await bot(`Estas son opciones de ejemplo tipo <b>${S.tipo}</b> 👇`,{html:`<div class="cars">${[['#e63946','Modelo A','2021 · 45,000 km'],['#9ca3af','Modelo B','2020 · 60,000 km'],['#3b82f6','Modelo C','2022 · 30,000 km']].map(([c,n,d])=>`<div class="car">${carSvg(c,S.tipo)}<div><b>${S.tipo} ${n}</b>${d}<br><span class="p">$ Ejemplo</span></div></div>`).join('')}</div>`},'¿Quieres venir a verlos? Elige un día para tu visita 📅');
+ opts(days(),async d=>{S.dia=d;await bot('¿A qué hora te acomoda?');opts(HRS,async h=>{S.hora=h;
+ await bot('¡Listo! Aquí está tu visita ✅',summary('🚗 Visita agendada · <em>'+folio('V')+'</em>',[['Tipo',S.tipo],['Presupuesto',S.pres],['Pago',S.fin],['Día',S.dia],['Hora',S.hora]],'Un asesor te confirmará por este chat.'));opts(END)})})})})})}
+// VENDER
+async function vender(){await bot('¡Claro! 💰 Te hacemos una oferta por tu auto. ¿Qué marca y modelo es? Escríbelo o elige uno:');opts(['Nissan Versa','VW Jetta','Chevrolet Aveo','Toyota Corolla','Otro'],async m=>{S.mod=m;
+ await bot('¿De qué año es?');opts(['2023 o más nuevo','2019 – 2022','2015 – 2018','2014 o anterior'],async a=>{S.anio=a;
+ await bot('¿Cuántos kilómetros tiene, más o menos?');opts(['Menos de 50 mil','50 – 100 mil','100 – 150 mil','Más de 150 mil'],async k=>{S.km=k;
+ await bot('Perfecto 👌 Mándame unas fotos del auto (frente, lados, interior y tablero) para darte una mejor valuación.');opts([['📷 Enviar fotos',fotos]])})})})}
+async function fotos(){qr.innerHTML='';const d=add('<div class="ph"><div class="photo">📷 frente.jpg</div><div class="photo">📷 interior.jpg</div></div>','u');
+ await bot('¡Recibidas, gracias! 📸 Se ven muy bien.','¿Cuándo puedes traerlo para la valuación sin costo? '+C);opts(days(),async d=>{S.dia=d;await bot('¿A qué hora?');opts(HRS,async h=>{S.hora=h;
+ await bot(summary('💰 Cita de valuación · <em>'+folio('VAL')+'</em>',[['Auto',S.mod],['Año',S.anio],['Kilometraje',S.km],['Fotos','2 recibidas'],['Día',S.dia],['Hora',S.hora]],'Trae tu tarjeta de circulación y factura. '));opts(END)})})}
+// TALLER
+async function taller(){await bot('🔧 Con gusto revisamos tu auto. ¿Qué servicio necesitas?');opts(['Afinación','Frenos','Suspensión','Diagnóstico','Hojalatería y pintura','Otro'],async s=>{S.srv=s;
+ await bot(s.startsWith('Hoja')?'Hojalatería '+C+' ¿De qué marca es tu auto?':'¿De qué marca es tu auto?');opts(['Nissan','Volkswagen','Chevrolet','Toyota','Ford','Otra'],async m=>{S.marca=m;
+ await bot('¿Qué día quieres traerlo?');opts(days(),async d=>{S.dia=d;await bot('¿A qué hora?');opts(HRS,async h=>{S.hora=h;
+ await bot('¡Cita registrada! ✅',summary('🔧 Servicio de taller · Folio <em>'+folio('T')+'</em>',[['Servicio',S.srv],['Marca',S.marca],['Día',S.dia],['Hora',S.hora]],'Te mandamos recordatorio un día antes.'));opts(END)})})})})}
+async function ubic(){await bot({html:`<div class="card"><svg viewBox="0 0 300 130" style="display:block;width:100%"><rect width="300" height="130" fill="#e5e7eb"/><path d="M0 40h300M0 95h300M70 0v130M190 0v130" stroke="#fff" stroke-width="9"/><path d="M0 70 Q150 20 300 110" stroke="#fde68a" stroke-width="6" fill="none"/><path d="M150 38c-12 0-20 9-20 20 0 15 20 34 20 34s20-19 20-34c0-11-8-20-20-20z" fill="#e63946"/><circle cx="150" cy="58" r="7" fill="#fff"/><text x="150" y="122" font-size="11" text-anchor="middle" fill="#555" font-family="sans-serif">Mapa de ejemplo</text></svg><h4>📍 [Nombre del negocio]</h4><dl><dt>Dirección</dt><dd>Calle y número ${C}<br>Colonia, CDMX ${C}</dd><dt>Horario</dt><dd>Lun a Vie 9:00–18:00 ${C}<br>Sáb 9:00–14:00 ${C}</dd></dl></div>`},'Te paso la ubicación para que llegues fácil. ¿Algo más?');opts(END)}
+async function asesor(){await bot('👤 ¡Claro! Te comunico con un asesor.',summary('👤 Solicitud de asesor · <em>'+folio('A')+'</em>',[['Estado','En espera'],['Respuesta','En minutos, en horario laboral']],'Mientras tanto, cuéntame qué necesitas y se lo paso.'));opts(END)}
+const KW=[[/compr|busc|precio|inventario|seminuevo|sed[aá]n|suv|pickup|camioneta/i,comprar],[/vend|valua|oferta|cotiz.*mi/i,vender],[/taller|servic|frenos?|afina|suspens|diagn|reparar|hojalat|pintura|falla|ruido/i,taller],[/d[oó]nde|ubica|direcci|horario|abren|cierran/i,ubic],[/asesor|humano|persona|llamar|hablar/i,asesor],[/men[uú]|inicio|hola|buen/i,()=>menu(true)]];
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const i=document.getElementById('txt'),v=i.value.trim();if(!v||busy)return;i.value='';qr.innerHTML='';add(esc(v),'u');
+ run(async()=>{if(expect){const f=expect;expect=null;return f(v)}const k=KW.find(([r])=>r.test(v));if(k)return k[1]();await bot('Perdón, no te entendí bien 🙈 Elige una de estas opciones:');opts([['🚗 Quiero comprar un auto',comprar],['💰 Quiero vender mi auto',vender],['🔧 Taller y servicio',taller],['📍 Ubicación y horario',ubic],['👤 Hablar con un asesor',asesor]])})};
+reset();
+</script></body></html>
